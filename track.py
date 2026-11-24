@@ -539,7 +539,7 @@ def main():
     parser.add_argument("--as-holdout", type=int, default=512, help="astra: our own paired check of the final edit")
     parser.add_argument("--as-smoke", action="store_true", help="astra: the GPU tools only (no API call, no key needed)")
     parser.add_argument("--as-provider", default="api", choices=("api", "google"))
-    parser.add_argument("--as-llm", default="", help="astra: the model (default openai/gpt-6-astra; google: gemini-4-argon)")
+    parser.add_argument("--as-llm", default="", help="astra: the model (default gpt-6-astra; google: gemini-4-argon)")
     parser.add_argument("--as-data", default="", help="astra: a folder made by `astradata` (raw + v1 answers) to give Astra")
     parser.add_argument("--as-goal", default="vs-dpo", choices=("vs-dpo", "on-top"),
                         help="astra: beat v1 from the raw weights (vs-dpo) or improve v1's own weights (on-top)")

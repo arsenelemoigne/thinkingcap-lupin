@@ -144,7 +144,7 @@ def main():
     ap.add_argument("--calls", type=int, default=6)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--haiku", default="anthropic/claude-haiku-5.5")
+    ap.add_argument("--haiku", default="claude-haiku-5.5")
     a = ap.parse_args()
     rng = random.Random(a.seed)
     doms = [rng.choice(DOMAINS) for _ in range(a.calls)]

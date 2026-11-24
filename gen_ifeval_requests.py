@@ -86,7 +86,7 @@ def grams(t):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--calls", type=int, default=350)
-    ap.add_argument("--model", default="anthropic/claude-haiku-5.5")
+    ap.add_argument("--model", default="claude-haiku-5.5")
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", default=str(Path(__file__).with_name("ifeval_requests_haiku.jsonl")))

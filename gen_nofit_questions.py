@@ -101,7 +101,7 @@ def check(item, key, model):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--calls", type=int, default=200)
-    ap.add_argument("--model", default="anthropic/claude-haiku-5.5")
+    ap.add_argument("--model", default="claude-haiku-5.5")
     ap.add_argument("--workers", type=int, default=10)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", default=str(Path(__file__).with_name("nofit_haiku.jsonl")))

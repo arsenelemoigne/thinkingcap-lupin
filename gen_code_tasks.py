@@ -72,7 +72,7 @@ COST = {"usd": 0.0}
 
 def argon_api(content, max_tokens=20000):
     """(20 Nov) The same Gemini 4 Argon through an API (key LLM_API_KEY from the environment, never written)."""
-    body = {"model": "google/gemini-4-argon", "max_tokens": max_tokens, "temperature": 1.0,
+    body = {"model": "gemini-4-argon", "max_tokens": max_tokens, "temperature": 1.0,
             "reasoning": {"effort": "low"}, "messages": [{"role": "user", "content": content}]}
     req = urllib.request.Request(os.environ["LLM_API_URL"], data=json.dumps(body).encode(),
                                  headers={"Authorization": "Bearer " + os.environ["LLM_API_KEY"],

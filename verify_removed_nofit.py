@@ -25,7 +25,7 @@ def check(item, key, model):
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--limit", type=int, default=0)
-ap.add_argument("--model", default="anthropic/claude-haiku-5.5")
+ap.add_argument("--model", default="claude-haiku-5.5")
 ap.add_argument("--out", default=str(Path(__file__).with_name("tools_multiple_removed_verified.jsonl")))
 a = ap.parse_args()
 key = os.environ["LLM_API_KEY"]

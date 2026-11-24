@@ -32,7 +32,7 @@ Per-task settings of the final run (floor = share of the original's thinking · 
 
 | | Math | Code | Instructions | One function | Several functions | No function fits |
 |---|---|---|---|---|---|---|
-| "Shorter" pairs per round | 52 | 48 | 64 | 24 | 22 | 30 |
+| Pairs per round (all kinds) | 52 | 48 | 64 | 24 | 22 | 30 |
 | Floor | 45% · 30 t | 38% · 36 t | 25% · 14 t | 44% · 25 t | 38% · 22 t | 20% · 10 t |
 | Saving cap | 61% | 60% | 60% | 45% | 53% | 72% |
 
@@ -111,7 +111,7 @@ I want to be plain about where the evaluation set touched this work.
 
 I am a lawyer in training, not an ML engineer, and this was my first machine-learning project. I did it alone, with the AI tools described below.
 
-**Other candidates.** To know where the bar was, I read the other candidates' public write-ups and code, and set myself the goal of going past it. I understood their methods, and I re-ran one published recipe as a reference point; it is not part of the final method, though its code paths are still in this repository. My method is not built on theirs: online rounds, the fixed reference, the per-task floors and the brake came out of my own failures (section 2). Two things I did take from that reading: one public dataset, MetaMathQA (GSM8K problems rewritten in wordings closer to SVAMP's), which I added as a math source after seeing it in another candidate's data mix; and one numerical setting, the base weights kept in float32 with float16 autocast during the update, which I first saw in another candidate's public training script.
+**Other candidates.** To know where the bar was, I read the other candidates' public write-ups and code, and set myself the goal of going past it. I understood their methods, and I re-ran one published recipe as a reference point; it is not part of the final method, though its code paths are still in this repository. My method is not built on theirs: online rounds, the fixed reference, the per-task floors and the brake came out of my own failures (section 2). Two things I did take from that reading: one public dataset, MetaMathQA (GSM8K problems rewritten in wordings closer to SVAMP's), which I added as a math source after seeing it in another candidate's data mix; and one numerical setting, the base weights kept in float32 with float16 autocast during the update, which I first saw in another candidate's public training script. A third idea from that reading, an extra loss term that keeps the preferred answer likely (an "NLL anchor"), is still in the code but switched off in the final run.
 
 **AI tools.** I worked with a coding agent (Claude Code): I chose the directions, set the constraints and made the decisions; the agent wrote and ran most of the code and drafted the analyses. I also consulted other language models as reviewers: mainly Gemini, another model early on, and once a second Claude model. They reviewed plans (made by me and Claude), and Gemini proposed setting variations from the data of my earlier runs, including the per-task limits of the final run, which is one of two variations it proposed. Language models (Claude Haiku and Gemini) also wrote part of the training questions for tool calls, code and instructions; each was kept only after automatic checks (`TRAINING_DATA.md`). I found that as its context grew, Claude became less reliable, and a reviewer starting from a clean context helped me decide on clean data.
 

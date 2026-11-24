@@ -83,7 +83,7 @@ def main():
     parser.add_argument("--rows", required=True, help="clean ToolACE rows (JSONL: prompt, category, function, reference)")
     parser.add_argument("--out", default=str(Path(__file__).with_name("nofit_near_verified.jsonl")))
     parser.add_argument("--max", type=int, default=6000, help="candidates sent to the judge")
-    parser.add_argument("--model", default="anthropic/claude-haiku-5.5")
+    parser.add_argument("--model", default="claude-haiku-5.5")
     parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--singles", type=int, default=0, help="one-function candidates per question (dp7: 3)")
     parser.add_argument("--hard", action="store_true",
