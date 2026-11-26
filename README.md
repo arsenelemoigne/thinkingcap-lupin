@@ -34,7 +34,6 @@ Code for **qwen3-0.6b-lupin**: Qwen3-0.6B trained with online DPO to think less 
 - `REPRODUCE.md`: how the final model was trained and evaluated, step by step.
 - `RULES.md`: every rule the final run applied, with exact values and where each lives in the code.
 - `TRAINING_DATA.md`: how each training question was built.
-- `EXPERIMENT_LOG.md`: dated record of the runs and decisions (edited copy).
 
 `track.py` also contains the stages of the directions I explored before (see `IDEA.md`, section 2); their helper scripts are not in this repository.
 

@@ -39,7 +39,7 @@ drawn, the check for already-used questions covered slices 2 to 19 and missed sl
 
 - Slices 1 to 19 (`data/od3-rK-questions.jsonl`): stage `od3prep`, run in several calls between 13 and 16 Nov
   (slices 1 to 6 first, with `--data-seed 18`; slices 17 to 19 last, with `--data-seed 58`). The exact calls
-  are recorded in `EXPERIMENT_LOG.md` (13 to 16 Nov). Each call added top-up question sets built by stage `newtop`.
+  are recorded in the experiment log sent with the submission (13 to 16 Nov). Each call added top-up question sets built by stage `newtop`.
 - Slices 20 to 22 (`data/od3g-rK-questions.jsonl`): stage `od3branch --ob-into od3g --ob-from 20 --ob-more 5
   --od3-tops r2x-code-m1,r2x-math-m1 --ob-trim 0.05 --ob-trim-max 0.4 --data-seed 61` (19 Nov). It asked for five
   slices; three passed its checks.
